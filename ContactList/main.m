@@ -27,12 +27,13 @@ int main() {
     scanf("%s", inputChars);
     NSString *inputString = [[NSString stringWithUTF8String:inputChars] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     
-    NSString *mainMenu = [collector inputForPrompt: inputString];
-    
-    NSLog(@"%@", mainMenu);
-    
     if ([inputString isEqualToString:@"quit"]) {
-        return <#expression#>
+        return 0;
+        
+    } else {
+        NSString *mainMenu = [collector inputForPrompt: inputString];
+        NSLog(@"%@", mainMenu);
+        
     }
     
     return  0;
