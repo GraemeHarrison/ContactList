@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E25D77F1C45822700C6C097 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25D77E1C45822700C6C097 /* main.m */; };
 		2E25D7871C45825600C6C097 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25D7861C45825600C6C097 /* InputCollector.m */; };
+		2E25D78A1C459A3400C6C097 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25D7891C459A3400C6C097 /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		2E25D77E1C45822700C6C097 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E25D7851C45825600C6C097 /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCollector.h; sourceTree = "<group>"; };
 		2E25D7861C45825600C6C097 /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCollector.m; sourceTree = "<group>"; };
+		2E25D7881C459A3400C6C097 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		2E25D7891C459A3400C6C097 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				2E25D77E1C45822700C6C097 /* main.m */,
 				2E25D7851C45825600C6C097 /* InputCollector.h */,
 				2E25D7861C45825600C6C097 /* InputCollector.m */,
+				2E25D7881C459A3400C6C097 /* Contact.h */,
+				2E25D7891C459A3400C6C097 /* Contact.m */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E25D7871C45825600C6C097 /* InputCollector.m in Sources */,
+				2E25D78A1C459A3400C6C097 /* Contact.m in Sources */,
 				2E25D77F1C45822700C6C097 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

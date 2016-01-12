@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
+#import "Contact.h"
 
 //int main(int argc, const char * argv[]) {
 //    @autoreleasepool {
@@ -19,22 +20,10 @@
 
 int main() {
     
-    NSLog(@"What would you like do next? new - Create a new contact list - List all contacts quit - Exit Application > _");
-    
     InputCollector *collector = [[InputCollector alloc] init];
     
-    char inputChars[255];
-    scanf("%s", inputChars);
-    NSString *inputString = [[NSString stringWithUTF8String:inputChars] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    
-    if ([inputString isEqualToString:@"quit"]) {
-        return 0;
-        
-    } else {
-        NSString *mainMenu = [collector inputForPrompt: inputString];
-        NSLog(@"%@", mainMenu);
-        
-    }
+    NSString *promptMenu = [collector inputForPrompt: @"What would you like do next?\n new - Create a new contact\n list - List all contacts\n quit - Exit Application > _"];
+    NSLog(@"%@", promptMenu);
     
     return  0;
 }
