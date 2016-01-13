@@ -12,17 +12,15 @@
 
 -(NSString *)inputForPrompt:(NSString *)promptString {
     
+    // Show promptString
     NSLog(@"%@", promptString);
+    
+    // Collect input with fgets / scanf
     char inputChars[255];
     scanf("%s", inputChars);
+    
+    // Return input as NSString
     NSString *inputString = [[NSString stringWithUTF8String:inputChars] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    
-    if ([inputString isEqualToString:@"quit"]) {
-        exit(0);
-    } else if ([inputString isEqualToString:@"new"]) {
-        NSLog(@"Enter a full name and email");
-    }
-    
     return inputString;
 }
 

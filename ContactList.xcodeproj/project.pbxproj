@@ -10,6 +10,7 @@
 		2E25D77F1C45822700C6C097 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25D77E1C45822700C6C097 /* main.m */; };
 		2E25D7871C45825600C6C097 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25D7861C45825600C6C097 /* InputCollector.m */; };
 		2E25D78A1C459A3400C6C097 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25D7891C459A3400C6C097 /* Contact.m */; };
+		2E8F74E71C45B3AB00C457B8 /* ContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8F74E61C45B3AB00C457B8 /* ContactList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		2E25D7861C45825600C6C097 /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCollector.m; sourceTree = "<group>"; };
 		2E25D7881C459A3400C6C097 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		2E25D7891C459A3400C6C097 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		2E8F74E51C45B3AB00C457B8 /* ContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactList.h; sourceTree = "<group>"; };
+		2E8F74E61C45B3AB00C457B8 /* ContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				2E25D7861C45825600C6C097 /* InputCollector.m */,
 				2E25D7881C459A3400C6C097 /* Contact.h */,
 				2E25D7891C459A3400C6C097 /* Contact.m */,
+				2E8F74E51C45B3AB00C457B8 /* ContactList.h */,
+				2E8F74E61C45B3AB00C457B8 /* ContactList.m */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8F74E71C45B3AB00C457B8 /* ContactList.m in Sources */,
 				2E25D7871C45825600C6C097 /* InputCollector.m in Sources */,
 				2E25D78A1C459A3400C6C097 /* Contact.m in Sources */,
 				2E25D77F1C45822700C6C097 /* main.m in Sources */,
@@ -249,6 +255,7 @@
 				2E25D7841C45822700C6C097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

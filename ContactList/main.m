@@ -9,21 +9,41 @@
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
 #import "Contact.h"
-
-//int main(int argc, const char * argv[]) {
-//    @autoreleasepool {
-//        // insert code here...
-//        NSLog(@"Hello, World!");
-//    }
-//    return 0;
-//}
+#import "ContactList.h"
 
 int main() {
     
     InputCollector *collector = [[InputCollector alloc] init];
     
-    NSString *promptMenu = [collector inputForPrompt: @"What would you like do next?\n new - Create a new contact\n list - List all contacts\n quit - Exit Application > _"];
-    NSLog(@"%@", promptMenu);
+    ContactList *contactList = [[ContactList alloc] init];
     
-    return  0;
+    while (YES) {
+        NSString *promptResult = [collector inputForPrompt:@"What would you like do next?\n new - Create a new contact\n list - List all contacts\n show - Show a contact from id number\n quit - Exit Application"];
+        
+        if ([promptResult isEqualToString:@"quit"]) {
+            return 0;
+        
+        } else if ([promptResult isEqualToString:@"new"]) {
+            Contact *contact = [[Contact alloc] init];
+            NSString *name = [collector inputForPrompt:@"Enter your full name"];
+            contact.name = name;
+            NSString *email = [collector inputForPrompt:@"Enter your email"];
+            contact.email = email;
+            [contactList addContact:contact];
+        
+        } else if ([promptResult isEqualToString:@"list"]) {
+            [contactList printContacts];
+        
+        } else if ([promptResult isEqualToString:@"show"]) {
+            NSString *inputID = [collector inputForPrompt:@"Enter contact id"];
+            
+            if ([inputID rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"0123456789"]].location != NSNotFound) {
+                int inputInt = [inputID intValue];
+            
+            //int contactID = [contactList.contactsArray objectAtIndex:inputInt];
+            [contactList showContact:inputInt];
+        }
+    }
+    }
+    return 0;
 }
