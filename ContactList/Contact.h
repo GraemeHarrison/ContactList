@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface Contact : NSObject
 
 @property (nonatomic, strong) NSString *name;

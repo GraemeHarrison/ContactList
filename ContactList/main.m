@@ -18,7 +18,7 @@ int main() {
     ContactList *contactList = [[ContactList alloc] init];
     
     while (YES) {
-        NSString *promptResult = [collector inputForPrompt:@"What would you like do next?\n new - Create a new contact\n list - List all contacts\n show - Show a contact from id number\n quit - Exit Application"];
+        NSString *promptResult = [collector inputForPrompt:@"What would you like do next?\n new - Create a new contact\n list - List all contacts\n show - Show a contact from id number\n find - Search for a contact\n quit - Exit Application"];
         
         if ([promptResult isEqualToString:@"quit"]) {
             return 0;
@@ -39,11 +39,13 @@ int main() {
             
             if ([inputID rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"0123456789"]].location != NSNotFound) {
                 int inputInt = [inputID intValue];
-            
-            //int contactID = [contactList.contactsArray objectAtIndex:inputInt];
-            [contactList showContact:inputInt];
+                [contactList showContact:inputInt];
         }
-    }
+        } else if ([promptResult isEqualToString:@"find"]) {
+            NSString *inputSearch = [collector inputForPrompt:@"Enter contact name or email"];
+            
+                [contactList showSearch:inputSearch];
+        }
     }
     return 0;
 }

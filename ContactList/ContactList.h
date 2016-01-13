@@ -20,4 +20,6 @@
 
 -(void)showContact:(int)contactID;
 
+-(void)showSearch:(NSString *)contactInfo;
+
 @end

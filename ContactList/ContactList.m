@@ -33,15 +33,17 @@
 }
 
 -(void)showContact:(int)contactID {
-    //[self.contactsArray objectAtIndex:contactID];
     Contact *contactName = [self.contactsArray objectAtIndex:contactID];
     NSString *name = contactName.name;
     NSLog(@"%@\n",name);
-    
 }
 
-//    NSUInteger indexValue = [self.contactsArray indexOfObject: @"graeme"];
-//    NSLog(@"%lu", (unsigned long)indexValue);
-
+-(void)showSearch:(NSString *)inputSearch {
+    for (Contact *contact in self.contactsArray) {
+        if ([contact.name containsString:inputSearch]) {
+            NSLog(@"%@ %@", contact.name, contact.email);
+        }
+    }
+}
 
 @end
